@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  background-color: var(--cardBGC);
+  width: 99vw;
+  height: 50px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline var(--hoverLink);
+}
+
+.icon__Wrapper {
+  display: flex;
+  gap: 0.5rem;
+
+  margin-left: 5rem;
+}
+
+.icon:hover {
+  color: var(--hoverLink);
+}

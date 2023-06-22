@@ -1,0 +1,17 @@
+:root {
+  font-family: 'JetBrains Mono', monospace;
+  
+  /* Variaveis */
+  --bodyBG: #18191A;
+  --cardBGC: #242526;
+  --hover: #3D3D3D;
+  --hoverLink: #721919;
+  --primary: #E4E6EB;
+  --secondary: #B0B3B8;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  
+}
