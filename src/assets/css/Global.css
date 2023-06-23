@@ -13,8 +13,12 @@
   margin: 0;
   padding: 0;
   color: var(--primary);
+  
 
   /* outline: 1px solid green; */
+}
+html{
+  background-color: var(--bodyBG);
 }
 ::-webkit-scrollbar {
   width: 13px;

@@ -36,17 +36,6 @@
   text-decoration: underline var(--hoverLink);
 }
 
-.icon__Wrapper {
-  display: flex;
-  gap: 0.5rem;
-
-  margin-left: 5rem;
-}
-
-.icon:hover {
-  color: var(--hoverLink);
-}
-
 .slider{
   position: fixed;
   top: -100%;
@@ -98,8 +87,5 @@
   }
   nav > a{
     display: none;
-  }
-  .icon__Wrapper {
-    margin-left: 2rem;
   }
 }

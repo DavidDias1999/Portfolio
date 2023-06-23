@@ -1,0 +1,16 @@
+.icon__Wrapper {
+  display: flex;
+  gap: 0.5rem;
+
+  margin-left: 5rem;
+}
+
+.icon:hover {
+  color: var(--hoverLink);
+}
+
+@media screen and (max-width: 768px){
+  .icon__Wrapper {
+    margin-left: 2rem;
+  }
+}

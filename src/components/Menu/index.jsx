@@ -1,11 +1,8 @@
-import styles from "./Menu.module.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { grey } from "@mui/material/colors";
+import styles from "./Menu.module.css"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiMenuAlt1 } from "react-icons/hi";
+import IconsSocials from "../IconsSocials";
 
 export default function Menu() {
   const [active, setActive] = useState(false);
@@ -55,17 +52,7 @@ export default function Menu() {
           </li>
         </ul>
       </nav>
-      <section className={styles.icon__Wrapper}>
-        <a href="https://github.com/DavidDias1999" target="_blank">
-          <GitHubIcon sx={{ color: grey[50] }} className={styles.icon} />
-        </a>
-        <a href="https://www.linkedin.com/in/daviddias99/" target="_blank">
-          <LinkedInIcon sx={{ color: grey[50] }} className={styles.icon} />
-        </a>
-        <a href="https://bit.ly/3NoDpLa" target="_blank">
-          <WhatsAppIcon sx={{ color: grey[50] }} className={styles.icon} />
-        </a>
-      </section>
+      <IconsSocials/>
     </header>
   );
 }

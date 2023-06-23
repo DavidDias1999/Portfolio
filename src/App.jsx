@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from "./components/Menu";
-import Inicio from "./pages/Home";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -10,9 +10,9 @@ function App() {
       
       <Routes>
 
-        <Route index element={<Inicio/>}/>
+        <Route index element={<Home/>}/>
 
-
+        
       </Routes>
     </BrowserRouter>
   );
