@@ -1,0 +1,47 @@
+.about__wrapper {
+  background-color: var(--bodyBG);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 0 3rem 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  box-sizing: border-box;
+  gap: 0.8rem;
+  padding: 2rem;
+}
+
+.picture {
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.icons {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.svg {
+  width: 2.5rem;
+}
+
+@media screen and (max-width: 803px) {
+  .about__wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .info {
+    max-width: 70%;
+  }
+}
