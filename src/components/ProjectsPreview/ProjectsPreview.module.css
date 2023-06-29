@@ -1,0 +1,20 @@
+.projectsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+.title {
+  margin-bottom: 2rem;
+}
+.ButtonMore {
+  display: flex;
+
+  background-color: var(--cardBGC);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.3rem 0.6rem 0.8rem;
+}
+.ButtonMore:hover {
+  background-color: var(--hover);
+}
