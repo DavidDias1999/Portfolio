@@ -16,6 +16,7 @@
 .nav {
   display: flex;
   gap: 1rem;
+  margin-right: 5rem;
 
 }
 
@@ -84,6 +85,9 @@
 @media screen and (max-width: 768px){
   .Menu{
     display: flex;
+  }
+  .nav{
+    margin-right: 2rem;
   }
   nav > a{
     display: none;

@@ -1,13 +1,10 @@
-.projectsWrapper {
+.graduationWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 6rem 2rem 0 3rem;
+}
 
-}
-.title {
-  margin-bottom: 2rem;
-}
 .ButtonMore {
   display: flex;
 

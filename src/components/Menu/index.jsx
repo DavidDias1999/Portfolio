@@ -19,10 +19,10 @@ export default function Menu() {
         <Link className={styles.link} to="/">
           Home
         </Link>
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} to="/projects">
           Projetos
         </Link>
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} to="/graduations">
           Formação
         </Link>
       </nav>
@@ -41,12 +41,12 @@ export default function Menu() {
             </Link>
           </li>
           <li className={styles.sliderLi}>
-            <Link className={styles.linkMenu} to="/">
+            <Link className={styles.linkMenu} to="/projects">
               Projetos
             </Link>
           </li>
           <li className={styles.sliderLi}>
-            <Link className={styles.linkMenu} to="/">
+            <Link className={styles.linkMenu} to="/graduations">
               Formação
             </Link>
           </li>

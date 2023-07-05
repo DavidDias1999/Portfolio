@@ -15,7 +15,7 @@ export default function ProjectsPreview() {
         <h2 className={styles.title}>Projetos</h2>
         <Project
           image={challenge}
-          name={"Encriptador"}
+          name={"Encriptador"}  
           github={"https://github.com/DavidDias1999/encriptador-alura"}
           pageOn={"https://daviddias1999.github.io/encriptador-alura/"}
           title="Encriptador de Texto"
@@ -27,7 +27,7 @@ export default function ProjectsPreview() {
           icon3={css}
         />
 
-        <Link to="/" className={styles.ButtonMore}>
+        <Link to="/projects" className={styles.ButtonMore}>
           Ver
           <AddIcon />
         </Link>

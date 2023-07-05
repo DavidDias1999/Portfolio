@@ -1,0 +1,21 @@
+.NotWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 2rem 0 3rem;
+  height: 65vh;
+}
+.div{
+  display: flex;
+  align-items: center;
+}
+.notSvg{
+  width: 3rem;
+}
+.titulo{
+  margin-left: 2rem;
+}
+.link{
+  margin-top: 2rem;
+}

@@ -1,0 +1,6 @@
+.graduationsWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 2rem 0 3rem;
+}
