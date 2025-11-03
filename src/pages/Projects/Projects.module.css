@@ -1,6 +1,34 @@
-.projectsWrapper{
+.projectsWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 6rem 2rem 0 3rem;
+  min-height: 60vh;
+  width: 90%;
+  max-width: 1400px;
+  margin: 6rem auto 0 auto;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.projectsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+.errorText {
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
 }

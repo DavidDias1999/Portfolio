@@ -2,15 +2,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 6rem 2rem 0 3rem;
-
+  width: 90%;
+  max-width: 1400px;
+  margin: 6rem auto 0 auto;
 }
+
 .title {
   margin-bottom: 2rem;
 }
+
+.projectsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 .ButtonMore {
   display: flex;
-
   background-color: var(--cardBGC);
   text-decoration: none;
   border-radius: 0.5rem;

@@ -14,17 +14,28 @@
   flex-direction: column;
   max-width: 50%;
   box-sizing: border-box;
-  gap: 0.8rem;
+  gap: 1.2rem;
   padding: 2rem;
+}
+
+.resume ul {
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.resume li {
+  margin-top: 0.5rem;
 }
 
 .picture {
   width: 15rem;
-  border-radius: 1rem;
+  height: 15rem;
+  border-radius: 10%;
+  object-fit: cover;
 }
 
 .icons {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -33,15 +44,31 @@
 
 .svg {
   width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--primary);
 }
 
 @media screen and (max-width: 803px) {
   .about__wrapper {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
   }
   .info {
-    max-width: 70%;
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .resume ul {
+    padding-left: 1.5rem;
+    align-self: flex-start;
+  }
+  .resume p {
+    text-align: center;
+  }
+  .resume p:nth-of-type(2) {
+    align-self: flex-start;
+    text-align: left;
   }
 }

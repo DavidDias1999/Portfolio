@@ -1,28 +1,70 @@
 import styles from "./Projects.module.css";
 import Project from "../../components/Project";
+import { useState, useEffect } from "react";
 
-import challenge from "../../assets/images/challenge1.png";
-import js from "../../assets/icons/js.svg";
-import html from "../../assets/icons/html.svg";
-import css from "../../assets/icons/css.svg";
+const GITHUB_API_URL = "https://api.github.com/users/DavidDias1999/repos";
 
 export default function Projects() {
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchRepos() {
+      try {
+        setLoading(true);
+        const response = await fetch(GITHUB_API_URL);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const filteredRepos = data.filter((repo) => !repo.fork);
+        const sortedRepos = filteredRepos.sort(
+          (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+        );
+        setRepos(sortedRepos);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setRepos([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchRepos();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className={styles.projectsWrapper}>
+        <h2 className={styles.title}>Projetos</h2>
+        <p className={styles.loadingText}>Carregando projetos do GitHub...</p>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className={styles.projectsWrapper}>
+        <h2 className={styles.title}>Projetos</h2>
+        <p className={styles.errorText}>
+          Ocorreu um erro ao buscar os projetos: {error}
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className={styles.projectsWrapper}>
       <h2 className={styles.title}>Projetos</h2>
-      <Project
-        image={challenge}
-        name={"Encriptador"}
-        github={"https://github.com/DavidDias1999/encriptador-alura"}
-        pageOn={"https://daviddias1999.github.io/encriptador-alura/"}
-        title="Encriptador de Texto"
-        resume={
-          " - Projeto Challenge ONE Oracle + Alura, construção de um encriptador de texto. A versão atual não possui responsividade para mobile."
-        }
-        icon1={js}
-        icon2={html}
-        icon3={css}
-      />
+s
+      <div className={styles.projectsList}>
+        {repos.length > 0 ? (
+          repos.map((repo) => <Project key={repo.id} repo={repo} />)
+        ) : (
+          <p>Nenhum projeto público encontrado.</p>
+        )}
+      </div>
     </section>
   );
 }
