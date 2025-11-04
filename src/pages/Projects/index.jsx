@@ -57,7 +57,6 @@ export default function Projects() {
   return (
     <section className={styles.projectsWrapper}>
       <h2 className={styles.title}>Projetos</h2>
-s
       <div className={styles.projectsList}>
         {repos.length > 0 ? (
           repos.map((repo) => <Project key={repo.id} repo={repo} />)
