@@ -51,5 +51,7 @@
     width: 100%;
     min-width: unset;
     flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 }

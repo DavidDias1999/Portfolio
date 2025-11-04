@@ -16,6 +16,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
+  overflow-wrap: break-word;
 }
 
 .resume {
@@ -45,6 +46,8 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .iconsLink:hover {
@@ -55,6 +58,9 @@
 @media screen and (max-width: 803px) {
   .projectWrapper {
     flex-basis: 100%;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
     min-width: unset;
   }
   .title {
