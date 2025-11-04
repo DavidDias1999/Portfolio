@@ -34,17 +34,25 @@ export default function Menu() {
         <nav className={active ? styles.sliderActive : styles.slider}>
           <ul className={styles.sliderUl}>
             <li className={styles.sliderLi}>
-              <Link className={styles.linkMenu} to="/">
+              <Link className={styles.linkMenu} to="/" onClick={showMenu}>
                 Home
               </Link>
             </li>
             <li className={styles.sliderLi}>
-              <Link className={styles.linkMenu} to="/projects">
+              <Link
+                className={styles.linkMenu}
+                to="/projects"
+                onClick={showMenu}
+              >
                 Projetos
               </Link>
             </li>
             <li className={styles.sliderLi}>
-              <Link className={styles.linkMenu} to="/graduations">
+              <Link
+                className={styles.linkMenu}
+                to="/graduations"
+                onClick={showMenu}
+              >
                 Formação
               </Link>
             </li>
