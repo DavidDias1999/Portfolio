@@ -17,12 +17,22 @@ export default function Project({ repo }) {
       )}
 
       <div className={styles.linksWrapper}>
-        <Link className={styles.iconsLink} to={repo.html_url} target="_blank">
+        <Link
+          className={styles.iconsLink}
+          to={repo.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GitHubIcon /> github.com/{repo.name}
         </Link>
 
         {repo.homepage && (
-          <Link className={styles.iconsLink} to={repo.homepage} target="_blank">
+          <Link
+            className={styles.iconsLink}
+            to={repo.homepage}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <WebIcon /> Teste aqui
           </Link>
         )}
