@@ -2,40 +2,18 @@ import styles from "./ProjectsPreview.module.css";
 import Project from "../Project";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-
-const GITHUB_API_URL = "https://api.github.com/users/DavidDias1999/repos";
+import { useGithubRepos } from "../../hooks/useGithubRepos";
+import { useMemo } from "react";
 
 export default function ProjectsPreview() {
-  const [latestRepos, setLatestRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { repos, loading, error } = useGithubRepos();
 
-  useEffect(() => {
-    async function fetchLatestRepos() {
-      try {
-        setLoading(true);
-        const response = await fetch(GITHUB_API_URL);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const filteredRepos = data.filter((repo) => !repo.fork);
-        const sortedRepos = filteredRepos.sort(
-          (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
-        );
-        setLatestRepos(sortedRepos.slice(0, 2));
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        setLatestRepos([]);
-      } finally {
-        setLoading(false);
-      }
+  const latestRepos = useMemo(() => {
+    if (repos) {
+      return repos.slice(0, 2);
     }
-
-    fetchLatestRepos();
-  }, []);
+    return [];
+  }, [repos]);
 
   return (
     <>
