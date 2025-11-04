@@ -10,7 +10,6 @@
   flex-shrink: 1;
   flex-basis: 550px;
   max-width: 1000px;
-  min-width: 560px;
 }
 
 .title {
@@ -54,6 +53,10 @@
 }
 
 @media screen and (max-width: 803px) {
+  .projectWrapper {
+    flex-basis: 100%;
+    min-width: unset;
+  }
   .title {
     font-size: 1.25rem;
   }
